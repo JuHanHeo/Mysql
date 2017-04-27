@@ -20,9 +20,8 @@ having to_days(max(s.to_date)) - to_days(e.hire_date) = (select max(days)
 																		
 -- 문제4
 select avg(salary) "평균 연봉"
-from salaries s , employees e
-where s.emp_no = e.emp_no
-and s.to_date = '9999-01-01';
+from salaries 
+where to_date = '9999-01-01';
 
 -- 문제5
 select max(salary) "최고 연봉", min(salary) "최저 연봉"
